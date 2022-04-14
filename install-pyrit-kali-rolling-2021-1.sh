@@ -4,7 +4,7 @@
 sudo bash -c "echo deb http://ftp.debian.org/debian/ stretch main contrib non-free >> /etc/apt/sources.list"
 sudo apt-get update
 sudo apt-get install -y \
-	python-dev \
+	python2-dev \
 	libssl-dev \
 	libpcap-dev \
 	python-scapy
@@ -17,9 +17,9 @@ sed -i "s/COMPILE_AESNI/COMPILE_AESNIX/" Pyrit/cpyrit/_cpyrit_cpu.c
 
 # Build and install
 cd Pyrit
-python setup.py clean
-python setup.py build
-sudo python setup.py install
+python2 setup.py clean
+python2 setup.py build
+sudo python2 setup.py install
 cd ..
 
 # Clean Up
